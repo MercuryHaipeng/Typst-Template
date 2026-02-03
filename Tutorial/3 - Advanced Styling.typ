@@ -8,7 +8,7 @@
 #set par(justify: true)
 #set text(
   font: "Libertinus Serif",
-  size: 14pt,
+  size: 12pt,
 )
 
 = Writing the right set rules
@@ -19,9 +19,8 @@
 // ***********************************
 // 设置标题和摘要形式
 // ***********************************
-// 设置标题样式
-#show title: set text(size: 24pt) // 字号
-#show title: set align(right)         // 对齐方式
+#show title: set text(size: 20pt) // 字号
+#show title: set align(center) // 对齐方式
 #show title: set block(below: 1.2em) // 标题与正文的距离
 
 #title[
@@ -54,8 +53,14 @@
 // ***********************************
 // 添加列和列标题
 // ***********************************
+// 设置标题样式
+#show title: set text(size: 20pt) // 字号
+#show title: set align(center) // 对齐方式
+#show title: set block(below: 1.2em) // 标题与正文的距离
+
 // 设置文档标题属性
 #set document(title: [A Fluid Dynamic Model for Glacier Flow])
+
 #set page(
 paper: "us-letter", header: align(
   right + horizon, // 页眉右对齐，垂直居中
@@ -76,13 +81,6 @@ paper: "us-letter", header: align(
     *Abstract* \
     #lorem(80)
   ]
-  // 使用box可以让摘要内容和标题对齐
-  // #box(width: 100%)[
-  // #par(justify: true)[
-  //   *Abstract* \
-  //   #lorem(80)
-  //   ]
-  // ]
 ]
 
 #show heading.where(level: 1): set align(center)
@@ -91,13 +89,14 @@ paper: "us-letter", header: align(
   weight: "regular" // Typst 默认标题是加粗 (Bold)
   ) 
 #show heading.where(level: 1): smallcaps // 小型大写字母
+
 #show heading.where(level: 2): set text(
   size: 14pt,
   weight: "regular", 
   style: "italic",
 )
 #show heading.where(level: 2): it => {
-  it.body + [.]
+  it.body
 }
 
 = Introduction
