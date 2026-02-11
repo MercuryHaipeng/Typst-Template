@@ -7,7 +7,7 @@
 
 == pow
 - If this is a decimal, the exponent can only be an integer.
-#calc.pow(2, 3) \
+#calc.pow(2, 3.5) \
 #calc.pow(decimal("2.5"), 2) \
 #calc.pow(2.5, 2.5) \
 
@@ -25,7 +25,7 @@
 
 
 = Trigonometric functions
-#calc.sin(1.5) \
+#calc.sin(1.57) \
 #calc.sin(90deg) 
 
 #calc.cos(1.5) \
@@ -63,6 +63,9 @@
 #calc.log(100, base:10) // Default base is 10.
 
 #calc.ln(calc.e)
+
+#calc.log(100, base: calc.e) \ 
+#calc.ln(100) 
 
 #calc.fact(5)
 
@@ -140,14 +143,14 @@ $ "calc.binom(5, 3)" = #calc.binom(5, 3) $
 #calc.odd(5) \
 #range(10).filter(calc.odd)
 
-- Calculates the remainder of two numbers. 
+- Calculates the remainder of two numbers. (结果是余数)
 #calc.rem(7, 3) \
 #calc.rem(7, -3) \
 #calc.rem(-7, 3) \
 #calc.rem(-7, -3) \
 #calc.rem(1.75, 0.5)
 
-- Performs euclidean division of two numbers. (余数必须非负)
+- Performs euclidean division of two numbers. (余数必须非负，结果是商)
 #calc.div-euclid(7, 3) \
 #calc.div-euclid(7, -3) \
 #calc.div-euclid(-7, 3) \
@@ -155,7 +158,7 @@ $ "calc.binom(5, 3)" = #calc.binom(5, 3) $
 #calc.div-euclid(1.75, 0.5) \
 #calc.div-euclid(decimal("1.75"), decimal("0.5"))
 
-- This calculates the least nonnegative remainder of a division. （商即为欧几里得除法）
+- This calculates the least nonnegative remainder of a division. (商即为欧几里得除法, 结果为余数)
 #calc.rem-euclid(7, 3) \
 #calc.rem-euclid(7, -3) \
 #calc.rem-euclid(-7, 3) \
@@ -171,5 +174,8 @@ $
 $
 
 - Calculates the p-norm of a sequence of values. (计算一组值的 p 范数)
-#calc.norm(1, 2, -3, 0.5) \
+#calc.norm(1, 2, -3, 0.5) \ // 默认 p=2
 #calc.norm(p: 3, 1, 2)
+
+#calc.sqrt(14.25) \ // 等价于 #calc.norm(1, 2, -3, 0.5) 
+#calc.root(9, 3) \ // 等价于 #calc.norm(p: 3, 1, 2)
