@@ -90,12 +90,14 @@
 = Function
 // Call a function.
 #list([A], [B])
+// Version without parentheses.
+#list[A][B]
+
+- A
+- B
 
 // Named arguments and trailing
 #enum(start: 1)[A][B][C]
-
-// Version without parentheses.
-#list[A][B]
 
 == Defining functions
 #let alert(body, fill: red) = {
