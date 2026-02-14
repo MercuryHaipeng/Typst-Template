@@ -8,7 +8,7 @@ Economics: "harvard-cite-them-right"
 Physics: "american-physics-society"
 "gb-7714-2015-numeric": China National Standard GB/T 7714-2015 
 */
-This was already noted by pirates long ago. @zhangSurveyVisualMamba2024
+This was already noted by pirates long ago. @zhangSurveyVisualMamba2024 @dongEnhancedRealtimeHuman2024
 
 Multiple sources say ... . @zhangSegmentAnythingModel2024 @xuGeneralizable3DFramework2025
 
@@ -74,12 +74,13 @@ You can also call `cite` explicitly. #cite(<rombachHighresolutionImageSynthesis2
 
 // #bibliography("../Tutorial/ref.bib", style: "ieee")  // multiple bibliographies are not yet supportedtypst
 
+
 // 以下三种方式等价
 @TianY.L2022 \
 #cite(<TianY.L2022>) \
 #cite(label("TianY.L2022"))
 
-This has been proven. @raiSurgPoseGeneralisableSurgical2025[p.~7]
+This has been proven. @raiSurgPoseGeneralisableSurgical2025[p.~7-10]
 
 /*
 "normal": Display in the standard way for the active style.
@@ -110,7 +111,7 @@ This is _emphasized._ \
 This is #emph[too.]
 
 #show emph: it => {
-  text(blue, it.body)
+  text(red, it.body)
 }
 
 This is _emphasized_ differently.
