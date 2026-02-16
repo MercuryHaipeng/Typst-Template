@@ -115,3 +115,9 @@ This is #emph[too.]
 }
 
 This is _emphasized_ differently.
+
+#show emph: it => {
+  text(blue, it.body)
+}
+
+This is _emphasized_ differently.
