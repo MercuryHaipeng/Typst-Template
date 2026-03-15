@@ -114,3 +114,34 @@ Current version: #sys.version \
 #assert.eq("Is there a".match("for this?"), none) \ // 如果能匹配就返回捕捉对象，否则返回None
 #"The time of my life.".match(regex("[mit]+e")) \ // 包含'm', 'i', 't'，且出现一次或多次'e'
 #"The time of my life.".match(regex("[mit]+e")).text
+
+= Type
+#let x = 10
+#if type(x) == int [
+  #x is an integer!
+] else [
+  #x is another value...
+]
+
+An image is of type #type(image("../Tutorial/Figures/09.jpg")).
+
+#let val = none
+#if val == none [Yes, it's none.]
+
+#type(12) \
+#type(14.7) \
+#type("hello") \
+#type(<glacier>) \
+#type([Hi]) \
+#type(x => x + 1) \
+#type(type)
+
+= Version
+/* 
+The first three components have names that can be used as fields: major, minor, patch. All following components do not have names. 
+*/
+#version() \
+#version(1) \
+#version(1, 2, 3, 4) \
+#version((1, 2, 3, 4)) \
+#version((1, 2), 3)

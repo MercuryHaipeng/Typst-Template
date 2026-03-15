@@ -46,9 +46,7 @@ Testing a different separator.
 https://example.com
 
 #link("https://example.com") \
-#link("https://example.com")[
-  See example.com
-]
+#link("https://example.com")[ See example.com ]
 
 == Introduction <intro>
 #link("mailto:hello@typst.app") \
