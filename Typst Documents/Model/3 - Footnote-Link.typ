@@ -4,7 +4,10 @@ Check the docs for more details.
 
 // By giving a label to a footnote, you can have multiple references to it.
 You can edit Typst documents online. #footnote[https://typst.app/app] <fn>
-Checkout Typst's website. @fn And the online app. #footnote(<fn>)
+
+Checkout Typst's website. @fn 
+
+And the online app. #footnote(<fn>)
 
 // How to number footnotes.
 #set footnote(numbering: "*")

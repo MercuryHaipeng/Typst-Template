@@ -26,8 +26,8 @@ Function call.
 #enum(
   enum.item(1)[First step],
   enum.item(5)[Fifth step],
-  enum.item(53)[Fifty-third step],
-  enum.item(702)[The last step],
+  enum.item(53)[Fifty-third step], // a~z, aa~az
+  enum.item(702)[The last step],  // 703 -> aaa
 )
 
 #pagebreak()
@@ -79,3 +79,22 @@ Here are some powers of two:
   "Orbit",
   "Descent",
 ) [+ #phase]
+
+
+#pagebreak()
+= Numbering
+#numbering("1.1)", 1, 2, 3, 4) \
+#numbering("1.a.i", 1, 2, 3) \
+#numbering("I – 1", 12, 2) \
+#numbering(
+  (..nums) => nums.pos().map(str).join(".") + ")",
+  1,
+  2,
+  3,
+)
+
+#let unary(.., last) = "|" * last
+#set heading(numbering: unary)
+= First heading
+= Second heading
+= Third heading
